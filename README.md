@@ -7,7 +7,9 @@ The aim of this Project was to create a streamlit app for song recommendation ba
 The app can be seen in the following link:
 
 https://melodymatch.streamlit.app/
+
 A demo can be seen here:
+
 ![Alt text](https://github.com/amirrezakamkar/song_recommender/blob/main/images/Demo.gif)
 
 ### 3. Resources
