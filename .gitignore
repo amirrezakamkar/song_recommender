@@ -6,3 +6,4 @@ node_modules/
 .venv/
 .streamlit/secrets.toml
 .cache
+.cache
