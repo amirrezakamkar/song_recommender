@@ -9,8 +9,11 @@ import base64
 
 # Load environment variables
 load_dotenv()
-client_id = os.getenv("SPOTIPY_CLIENT_ID")
-client_secret = os.getenv("SPOTIPY_CLIENT_SECRET")
+#client_id = os.getenv("SPOTIPY_CLIENT_ID")
+#client_secret = os.getenv("SPOTIPY_CLIENT_SECRET")
+client_id = st.secrets["SPOTIPY_CLIENT_ID"]
+client_secret = st.secrets["SPOTIPY_CLIENT_SECRET"]
+
 client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
