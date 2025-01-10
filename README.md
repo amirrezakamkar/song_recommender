@@ -13,7 +13,7 @@ A demo can be seen here:
 ![Alt text](https://github.com/amirrezakamkar/song_recommender/blob/main/images/Demo.gif)
 
 ### 3. Resources
-For this project, a subset of Million Song Database (http://millionsongdataset.com/) has been used. Several other columns have been added using Spotify API (https://developer.spotify.com/)
+For this project, a subset of Million Song Database (http://millionsongdataset.com/) has been used. Several other columns have been added using Spotify API (https://developer.spotify.com/).
 
 ### 4. Model used and evevaluation
 In this project, the KMeans model from the sklearn library was utilized. The model was trained with cluster values ranging from k=2 to k=51 to generate the silhouette and elbow charts. Based on the analysis of these charts, k=9k was identified as the optimal number of clusters and was subsequently used in the project.
