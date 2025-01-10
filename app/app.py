@@ -19,7 +19,7 @@ kmeans_model = joblib.load('../Model/kmeans_model_9.pkl')
 scaler = joblib.load('../Scaler/scaler.pkl')
 
 # Load your song dataset
-df = pd.read_csv('../data/names_genres_clustered.csv')
+df = pd.read_csv('../data/9_names_genres_clustered.csv')
 
 # Initialize session state for smoother navigation
 if 'page' not in st.session_state:
