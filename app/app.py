@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import pickle
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import os
@@ -18,13 +17,11 @@ client_secret = st.secrets["SPOTIPY_CLIENT_SECRET"]
 client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
-# Load the Kmeas model
-with open('./Model/kmeans_model_9.pkl', 'rb') as file:
-    kmeans_model = pickle.load(file)
+# Load the Kmeas model with joblib
+kmeans_model = joblib.load('./Model/kmeans_model_9.pkl')
 
 # Load the scaler
-with open('./Scaler/scaler.pkl', 'rb') as file:
-    scaler = pickle.load(file)
+scaler = joblib.load('./Scaler/scaler.pkl')
 
 # Load your song dataset
 df = pd.read_csv('./Data/9_names_genres_clustered.csv')
