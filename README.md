@@ -14,6 +14,7 @@ For this project, a subset of Million Song Database (http://millionsongdataset.c
 In this project, the KMeans model from the sklearn library was utilized. The model was trained with cluster values ranging from k=2k=2 to k=51k=51 to generate the silhouette and elbow charts. Based on the analysis of these charts, k=9k=9 was identified as the optimal number of clusters and was subsequently used in the project.
 ![Alt text](https://github.com/amirrezakamkar/song_recommender/blob/main/images/elbow.png)
 ![Alt text](https://github.com/amirrezakamkar/song_recommender/blob/main/images/silhouette.png)
+![Alt text](Demo.gif)
 ### 5. Steps to run the app locally:
 - Clone the repository
 - Run this code in your enviroment to install required libraries:
