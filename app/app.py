@@ -9,10 +9,16 @@ import base64
 
 # Load environment variables
 load_dotenv()
-#client_id = os.getenv("SPOTIPY_CLIENT_ID")
-#client_secret = os.getenv("SPOTIPY_CLIENT_SECRET")
-client_id = st.secrets["SPOTIPY_CLIENT_ID"]
-client_secret = st.secrets["SPOTIPY_CLIENT_SECRET"]
+
+try:
+    client_id = st.secrets["SPOTIPY_CLIENT_ID"]
+    client_secret = st.secrets["SPOTIPY_CLIENT_SECRET"]
+except KeyError:
+    client_id = os.getenv("SPOTIPY_CLIENT_ID")
+    client_secret = os.getenv("SPOTIPY_CLIENT_SECRET")
+
+if not client_id or not client_secret:
+    st.error("Missing Spotify API credentials. Please check your configuration.")
 
 client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
