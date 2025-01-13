@@ -24,13 +24,12 @@ client_credentials_manager = SpotifyClientCredentials(client_id=client_id, clien
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 # Load the Kmeas model with joblib
-kmeans_model = joblib.load('./Model/kmeans_model_9.pkl')
-
+kmeans_model = joblib.load('../Model/kmeans_model_9.pkl')
 # Load the scaler
-scaler = joblib.load('./Scaler/scaler.pkl')
+scaler = joblib.load('../Scaler/scaler.pkl')
 
 # Load your song dataset
-df = pd.read_csv('./Data/9_names_genres_clustered.csv')
+df = pd.read_csv('../Data/9_names_genres_clustered.csv')
 
 # Initialize session state for smoother navigation
 if 'page' not in st.session_state:
@@ -65,7 +64,7 @@ def set_background(image_file):
 
 
 # Add the background image
-set_background("./app/Untitled-1.jpg") 
+set_background("../app/Untitled-1.jpg") 
 
 def get_song_genres(track_data):
     """Get genre information for a song from Spotify"""
